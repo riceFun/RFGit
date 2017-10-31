@@ -7,6 +7,8 @@
 //
 
 #import "FavoriteCitysView.h"
+#import "RFDataManager.h"
+#import "FavoriteCityModel.h"
 
 static NSString *FavoriteCityTableCellID = @"FavoriteCityTableCellID";
 
@@ -24,6 +26,7 @@ static NSString *FavoriteCityTableCellID = @"FavoriteCityTableCellID";
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
         self.tableView.tableFooterView = self.tableFooterView;
+        self.tableView.separatorColor = ThemeColor;
         [self addSubview:self.tableView];
     }
     return self;
@@ -36,6 +39,14 @@ static NSString *FavoriteCityTableCellID = @"FavoriteCityTableCellID";
     return _tableFooterView;
 }
 
+-(NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataArr;
+}
+
+
 
 #pragma mark UITableViewDelegate & DataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -43,7 +54,8 @@ static NSString *FavoriteCityTableCellID = @"FavoriteCityTableCellID";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    self.dataArr  = [[RFDataManager sharedInstance] getFavoriteCitys] ;
+    return self.dataArr.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -51,23 +63,40 @@ static NSString *FavoriteCityTableCellID = @"FavoriteCityTableCellID";
     if (!cell) {
         cell = [[FavoriteCityTableCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:FavoriteCityTableCellID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.preservesSuperviewLayoutMargins = NO;
+        cell.separatorInset = UIEdgeInsetsZero;
+        cell.layoutMargins = UIEdgeInsetsZero;
     }
-    cell.updateTimeLabel.text = @"10:10";
-    cell.locationImageView.image = UIIMAGE(@"3.png");
-    cell.cityLabel.text = @"杭州";
-    cell.tempLabel.text = @"17";
+    
+    FavoriteCityModel *model = self.dataArr[indexPath.row];
+    
+//    cell.updateTimeLabel.text = @"10:10";
+//    cell.locationImageView.image = UIIMAGE(@"3.png");
+//    cell.city_detailLabel.text = [NSString stringWithFormat:@"%@  晴",model.name];
+//    cell.tempLabel.text = @"17";
+
+    cell.city_detailLabel.text = model.name;
     
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return FAVORITE_CELL_HEIGHT;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.deleagate && [self.deleagate respondsToSelector:@selector(didSelectCell:)]) {
-        [self.deleagate didSelectCell:indexPath];
+        FavoriteCityModel *model = self.dataArr[indexPath.row];
+        [self.deleagate didSelectCell:model.name];
     }
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    FavoriteCityModel *model = self.dataArr[indexPath.row];
+    [[RFDataManager sharedInstance] deleteFavoriteCityWith:model.name];
+    [self.dataArr removeObjectAtIndex:indexPath.row];
+    
+    [tableView reloadData];
 }
 
 @end

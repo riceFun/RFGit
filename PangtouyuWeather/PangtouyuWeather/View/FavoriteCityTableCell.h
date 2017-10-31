@@ -11,7 +11,7 @@
 @interface FavoriteCityTableCell : UITableViewCell
 @property (nonatomic,strong) UILabel *updateTimeLabel;
 @property (nonatomic,strong) UIImageView *locationImageView;
-@property (nonatomic,strong) UILabel *cityLabel;
+@property (nonatomic,strong) UILabel *city_detailLabel;
 @property (nonatomic,strong) UILabel *tempLabel;
 
 @end

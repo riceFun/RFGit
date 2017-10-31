@@ -21,8 +21,8 @@
 
 +(RFNetworkManager *)sharedInstance;
 
--(void)requestData;
+-(void)requestDataWith:(NSString *)cityName;
 
--(void)requestDataCallBackBlock:(void (^)(Result *resultInfo))weathblock;
+//-(void)requestDataCallBackBlock:(void (^)(Result *resultInfo))weathblock;
 
 @end

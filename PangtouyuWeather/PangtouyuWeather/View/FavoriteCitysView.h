@@ -12,7 +12,7 @@
 
 @protocol FavoriteCitysViewDelegate <NSObject>
 
--(void)didSelectCell:(NSIndexPath *)indexPath;
+-(void)didSelectCell:(NSString *)city;
 
 @end
 
@@ -23,6 +23,8 @@
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)FavoriteTableFooterView *tableFooterView;
 @property (nonatomic,weak) id<FavoriteCitysViewDelegate> deleagate;
+
+@property (nonatomic,strong) NSMutableArray *dataArr;
 
 
 @end

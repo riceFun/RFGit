@@ -90,6 +90,13 @@
 		21DC9A891F99EBB1008C5EF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9A881F99EBB1008C5EF9 /* main.m */; };
 		21DC9ABD1F99F17B008C5EF9 /* HourInfoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9ABC1F99F17B008C5EF9 /* HourInfoItemCell.m */; };
 		21DC9AC31F99F2AD008C5EF9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9AC21F99F2AD008C5EF9 /* MainViewController.m */; };
+		21FAB20C1FA6C40000475553 /* CityChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB20B1FA6C40000475553 /* CityChooseViewController.m */; };
+		21FAB20F1FA6C41E00475553 /* CityChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB20E1FA6C41E00475553 /* CityChooseView.m */; };
+		21FAB2131FA6CA9B00475553 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB2121FA6CA9B00475553 /* City.m */; };
+		21FAB2161FA6CFAD00475553 /* CityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB2151FA6CFAD00475553 /* CityGroup.m */; };
+		21FAB2191FA6D17900475553 /* RFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB2181FA6D17900475553 /* RFDataManager.m */; };
+		21FAB21C1FA81F0900475553 /* FavoriteCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FAB21B1FA81F0900475553 /* FavoriteCityModel.m */; };
+		21FAB21E1FA8593000475553 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FAB21D1FA8593000475553 /* refresh.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +240,19 @@
 		21DC9ABC1F99F17B008C5EF9 /* HourInfoItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourInfoItemCell.m; sourceTree = "<group>"; };
 		21DC9AC11F99F2AD008C5EF9 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		21DC9AC21F99F2AD008C5EF9 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		21FAB20A1FA6C40000475553 /* CityChooseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CityChooseViewController.h; path = ../View/CityChooseViewController.h; sourceTree = "<group>"; };
+		21FAB20B1FA6C40000475553 /* CityChooseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CityChooseViewController.m; path = ../View/CityChooseViewController.m; sourceTree = "<group>"; };
+		21FAB20D1FA6C41E00475553 /* CityChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityChooseView.h; sourceTree = "<group>"; };
+		21FAB20E1FA6C41E00475553 /* CityChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityChooseView.m; sourceTree = "<group>"; };
+		21FAB2111FA6CA9B00475553 /* City.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		21FAB2121FA6CA9B00475553 /* City.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		21FAB2141FA6CFAD00475553 /* CityGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityGroup.h; sourceTree = "<group>"; };
+		21FAB2151FA6CFAD00475553 /* CityGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityGroup.m; sourceTree = "<group>"; };
+		21FAB2171FA6D17900475553 /* RFDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFDataManager.h; sourceTree = "<group>"; };
+		21FAB2181FA6D17900475553 /* RFDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFDataManager.m; sourceTree = "<group>"; };
+		21FAB21A1FA81F0900475553 /* FavoriteCityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteCityModel.h; sourceTree = "<group>"; };
+		21FAB21B1FA81F0900475553 /* FavoriteCityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteCityModel.m; sourceTree = "<group>"; };
+		21FAB21D1FA8593000475553 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +287,7 @@
 				2127ECB81F9D916F00D9891C /* test.png */,
 				219C026A1FA1C35D004F77A6 /* menu1.png */,
 				219C026C1FA1C453004F77A6 /* menu.png */,
+				21FAB21D1FA8593000475553 /* refresh.png */,
 			);
 			path = PicTure;
 			sourceTree = "<group>";
@@ -397,6 +418,8 @@
 				21DC9AC21F99F2AD008C5EF9 /* MainViewController.m */,
 				219C02731FA2CC3A004F77A6 /* FavoriteCitysViewController.h */,
 				219C02741FA2CC3A004F77A6 /* FavoriteCitysViewController.m */,
+				21FAB20A1FA6C40000475553 /* CityChooseViewController.h */,
+				21FAB20B1FA6C40000475553 /* CityChooseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -428,6 +451,8 @@
 				219C027D1FA2CFED004F77A6 /* FavoriteCityTableCell.m */,
 				219C027F1FA2D890004F77A6 /* FavoriteTableFooterView.h */,
 				219C02801FA2D890004F77A6 /* FavoriteTableFooterView.m */,
+				21FAB20D1FA6C41E00475553 /* CityChooseView.h */,
+				21FAB20E1FA6C41E00475553 /* CityChooseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +478,12 @@
 				219C00F11FA17F02004F77A6 /* Result.m */,
 				219C01A91FA18B52004F77A6 /* ReturnInfo.h */,
 				219C01AA1FA18B52004F77A6 /* ReturnInfo.m */,
+				21FAB2111FA6CA9B00475553 /* City.h */,
+				21FAB2121FA6CA9B00475553 /* City.m */,
+				21FAB2141FA6CFAD00475553 /* CityGroup.h */,
+				21FAB2151FA6CFAD00475553 /* CityGroup.m */,
+				21FAB21A1FA81F0900475553 /* FavoriteCityModel.h */,
+				21FAB21B1FA81F0900475553 /* FavoriteCityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,6 +509,8 @@
 				219C00C01FA0943D004F77A6 /* RFNetworkManager.m */,
 				219C00C21FA09480004F77A6 /* RFLocationManager.h */,
 				219C00C31FA09480004F77A6 /* RFLocationManager.m */,
+				21FAB2171FA6D17900475553 /* RFDataManager.h */,
+				21FAB2181FA6D17900475553 /* RFDataManager.m */,
 				2127ECAD1F9D825A00D9891C /* RFDefine.h */,
 				2127ECAE1F9D828500D9891C /* ProjColorDefine.h */,
 			);
@@ -627,6 +660,7 @@
 				219C024B1FA1B73D004F77A6 /* 12.png in Resources */,
 				219C025B1FA1B73D004F77A6 /* 58.png in Resources */,
 				219C025E1FA1B73D004F77A6 /* 9.png in Resources */,
+				21FAB21E1FA8593000475553 /* refresh.png in Resources */,
 				219C02601FA1B73D004F77A6 /* 22.png in Resources */,
 				219C02621FA1B73D004F77A6 /* 17.png in Resources */,
 				219C02681FA1B73D004F77A6 /* 15.png in Resources */,
@@ -673,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21FAB20F1FA6C41E00475553 /* CityChooseView.m in Sources */,
 				219C01B61FA1B194004F77A6 /* SVIndefiniteAnimatedView.m in Sources */,
 				21DC9A891F99EBB1008C5EF9 /* main.m in Sources */,
 				219C02781FA2CDC2004F77A6 /* FavoriteCitysView.m in Sources */,
@@ -681,6 +716,8 @@
 				219C00E81FA17D2E004F77A6 /* Hourly.m in Sources */,
 				219C02701FA1DCD9004F77A6 /* IndexTableCell.m in Sources */,
 				2127ECC41F9DE15D00D9891C /* CityHourInfoTableCell.m in Sources */,
+				21FAB21C1FA81F0900475553 /* FavoriteCityModel.m in Sources */,
+				21FAB20C1FA6C40000475553 /* CityChooseViewController.m in Sources */,
 				219C00C11FA0943D004F77A6 /* RFNetworkManager.m in Sources */,
 				219C00EB1FA17D79004F77A6 /* AqiInfo.m in Sources */,
 				219C00DF1FA17B62004F77A6 /* Day.m in Sources */,
@@ -696,7 +733,10 @@
 				2127ECBE1F9D9D4600D9891C /* MainView.m in Sources */,
 				219C00D81FA1737E004F77A6 /* NSObject+YYModel.m in Sources */,
 				21DC9AC31F99F2AD008C5EF9 /* MainViewController.m in Sources */,
+				21FAB2191FA6D17900475553 /* RFDataManager.m in Sources */,
 				219C01B91FA1B194004F77A6 /* SVRadialGradientLayer.m in Sources */,
+				21FAB2161FA6CFAD00475553 /* CityGroup.m in Sources */,
+				21FAB2131FA6CA9B00475553 /* City.m in Sources */,
 				219C00E51FA17C70004F77A6 /* Daily.m in Sources */,
 				219C00E21FA17C32004F77A6 /* Night.m in Sources */,
 				219C02811FA2D890004F77A6 /* FavoriteTableFooterView.m in Sources */,

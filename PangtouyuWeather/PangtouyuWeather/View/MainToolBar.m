@@ -41,12 +41,12 @@
     CGFloat pageControlWidth = SCREEN_WIDTH_SELF - (4 * intervelL) - (2 * menuBtnHeight);
     
     self.dataSourceBtn = [[UIButton alloc]initWithFrame:CGRectMake(intervelL, intervelL, menuBtnHeight, menuBtnHeight)];
-    [self.dataSourceBtn setImage:UIIMAGE(@"menu.png") forState:UIControlStateNormal];
+    [self.dataSourceBtn setImage:UIIMAGE(@"refresh.png") forState:UIControlStateNormal];
     [self addSubview:self.dataSourceBtn];
     
     self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake((2 * intervelL) + menuBtnHeight, 3 *intervelL, pageControlWidth, pageControlHeight)];
     self.pageControl.backgroundColor = [UIColor redColor];
-    [self addSubview:self.pageControl];
+//    [self addSubview:self.pageControl];
     
     self.menuButton = [[UIButton alloc]initWithFrame:CGRectMake((3 * intervelL) + menuBtnHeight + pageControlWidth, intervelL, menuBtnHeight, menuBtnHeight)];
     [self.menuButton setImage:UIIMAGE(@"menu.png") forState:UIControlStateNormal];

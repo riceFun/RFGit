@@ -76,9 +76,16 @@ static NSString *hourInfoItemCellID = @"HourInfoItemCellID";
     }else if (section == 1){
         return self.dataResult.daily.count;
     }else if (section == 2){
+        if (self.dataResult.city == nil) {
+            return 0;
+        }
         return 1;
     }else if (section == 3){
+        if (self.dataResult.city == nil) {
+            return 0;
+        }
         return 6;
+        
     }else if (section == 4){
         return self.dataResult.index.count;
     }
@@ -152,10 +159,6 @@ static NSString *hourInfoItemCellID = @"HourInfoItemCellID";
                 cell.textLabel.font = [UIFont systemFontOfSize:12];
                 cell.detailTextLabel.font = [UIFont systemFontOfSize:26];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            }
-            
-            if (self.dataResult == nil) {
-                return nil;
             }
             
             if (indexPath.row == 0) {

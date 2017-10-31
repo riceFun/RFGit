@@ -9,6 +9,10 @@
 #ifndef RFDefine_h
 #define RFDefine_h
 
+#define jjjj RFLog(@"调试用");
+#define jjred [UIColor redColor]
+
+
 /**
  *Log日志打印
  */
@@ -24,6 +28,7 @@
 #define SCREEN_WIDTH_SELF self.frame.size.width
 #define SCREEN_HEIGHT_SELF self.frame.size.height
 #define INDEX_CELL_HEIGHT 120
+#define FAVORITE_CELL_HEIGHT 80
 
 #define BUTTON_TARGET(button,selectorName) [button addTarget:self action:@selector(selectorName:) forControlEvents:UIControlEventTouchUpInside]
 #define BUTTON_TARGET_DOWN(button,selectorName) [button addTarget:self action:@selector(selectorName:) forControlEvents:UIControlEventTouchDown]

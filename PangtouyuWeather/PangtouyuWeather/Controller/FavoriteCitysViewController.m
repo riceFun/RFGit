@@ -7,6 +7,8 @@
 //
 
 #import "FavoriteCitysViewController.h"
+#import "CityChooseViewController.h"
+
 #import "FavoriteCitysView.h"
 
 @interface FavoriteCitysViewController ()<FavoriteCitysViewDelegate>
@@ -26,6 +28,19 @@
     self.favoriteCitysView = [[FavoriteCitysView alloc]initWithFrame:self.view.bounds];
     self.favoriteCitysView.deleagate =self;
     self.view = self.favoriteCitysView;
+    
+    BUTTON_TARGET(self.favoriteCitysView.tableFooterView.addCityBtn, addCity);
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+//    [self.favoriteCitysView getDataForDataArr];
+    [self.favoriteCitysView.tableView reloadData];
+}
+
+-(void)addCity:(UIButton *)btn{
+    CityChooseViewController *vc = [[CityChooseViewController alloc]init];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +49,11 @@
 }
 
 #pragma mark FavoriteCitysViewDelegate
--(void)didSelectCell:(NSIndexPath *)indexPath{
+-(void)didSelectCell:(NSString *)city{
+    if (self.delgate && [self.delgate respondsToSelector:@selector(selectCity:)]) {
+        [self.delgate selectCity:city];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

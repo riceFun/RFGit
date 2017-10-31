@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol FavoriteCitysViewControllerDelegate <NSObject>
+-(void)selectCity:(NSString *)city;
+@end
 
 @interface FavoriteCitysViewController : UIViewController
+@property (nonatomic,weak) id<FavoriteCitysViewControllerDelegate> delgate;
 
 @end
